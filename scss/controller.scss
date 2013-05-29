@@ -1,0 +1,99 @@
+@import 'base';
+
+$bgcolor: #2B2B2B;
+$fgcolor: white;
+$highlight: #3892E3;
+$overlaybg: rgba(#000,0.95);
+
+html{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	padding-top: 44px;
+}
+
+.overlay{
+	background-color: $overlaybg;
+	color: $fgcolor;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.overlay-close-icon{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 20px;
+	font-size: 30px;
+	z-index: 2000;
+}
+
+.overlay-close-icon:hover{
+	cursor: pointer;
+	color: $highlight;
+}
+
+.overlay-prompt{
+	margin-top: 50px;
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+}
+
+.overlay-touchmarker{
+	font-size: 15px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.controller{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $bgcolor;
+	color: $fgcolor;
+}
+
+.control{
+	width: 50%;
+	height: 231px;
+	text-align: center;
+	// background-color: $highlight;
+	float: left;
+
+	&:hover{
+		// background-color: lighten($bgcolor,10%);
+		cursor: pointer;
+	}
+
+	transition: 200ms all;
+	-webkit-transition: 200ms all;
+	-moz-transition: 200ms all;
+
+}
+
+.control-icon{
+	font-size: 50px;
+	display: block;
+}
+
+.control-active{
+	background-color: $highlight;
+	&:hover{
+		// background-color: $highlight;//lighten($highlight,10%);
+		cursor: pointer;
+	}
+}
